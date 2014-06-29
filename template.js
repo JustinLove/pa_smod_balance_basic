@@ -96,7 +96,7 @@ var resourcePath = function(stream) {
     return paPath() + '/' + stream + '/media/' // ????
   }
   else if(process.platform === 'darwin') {
-    return paPath() + '/data/streams/' + stream +'/PA.app/Contents/Resources/'
+    return paPath() + '/data/streams/' + stream +'/PA.app/Contents/Resources/media/'
   }
   else {
     // the user can change it anyway
