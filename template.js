@@ -33,10 +33,13 @@ exports.template = function(grunt, init, done) {
     }),
     init.prompt('version'),
     init.prompt('licenses', 'Apache-2.0'),
-    init.prompt('build'),
     init.prompt('stream', 'stable'),
     init.prompt('resource_root', function(value, props, done) {
       done(null, resourcePath(props.stream))
+    }),
+    init.prompt('build', function(value, props, done) {
+      var versionPath = props.resource_root + '../version.txt'
+      done(null, grunt.file.read(versionPath).trim())
     }),
     init.prompt('filename_regexp'),
     init.prompt('include_build', 'Y'),
