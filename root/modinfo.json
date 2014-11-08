@@ -1,6 +1,7 @@
 {
   "author": "{%= author_name %}",
   "build": "{%= build %}",
+  "category": [{%= category %}],
   "context": "server",
   "date": "{%= grunt.template.today('yyyy/mm/dd') %}",
   "description": "{%= description %}",
