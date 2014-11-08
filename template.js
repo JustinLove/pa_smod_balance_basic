@@ -32,7 +32,6 @@ exports.template = function(grunt, init, done) {
       done(null, props.author_identifier + props.name)
     }),
     init.prompt('version'),
-    init.prompt('forum'),
     init.prompt('licenses', 'Apache-2.0'),
     init.prompt('build'),
     init.prompt('stream', 'stable'),
